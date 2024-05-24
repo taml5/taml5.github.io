@@ -1,4 +1,4 @@
-import "./Social.css"
+import "./Social.css";
 
 /** A component to display the clickable logo and name of a social media link.
  * 

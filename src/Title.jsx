@@ -1,4 +1,4 @@
-import "./Title.css"
+import "./Title.css";
 
 /** The component responsible for displaying the headshot, name, and email address.
  */
