@@ -1,8 +1,9 @@
 import './App.css';
 import Title from './Title';
 import Description from './Description';
+import ProjectContainer from './ProjectContainer';
 
-let root = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "./dark/" : "./";
+const root = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "./dark/" : "./";
 const socials = [
 	{
 		id: "github",
@@ -27,6 +28,20 @@ const blurb = (
 	</p>
 	</>
 );
+const projects = [
+	{
+		id: "website",
+		title: "Personal Website",
+		imagePath: root + "website.png",
+		description: "test"
+	},
+	{
+		id: "game",
+		title: "Text-Based Adventure Game",
+		imagePath: "./game.png",
+		description: "test"
+	}
+]
 
 function App() {
 	return (
@@ -38,6 +53,9 @@ function App() {
 	/>
 	<div className="projects">
 		<h1>Projects</h1>
+		<ProjectContainer
+			projects={projects}
+		/>
 	</div>
 	<p id="updateTag">Last updated May 2024</p>
 	</>
