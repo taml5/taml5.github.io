@@ -1,0 +1,11 @@
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+}
