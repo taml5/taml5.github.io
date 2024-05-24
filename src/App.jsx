@@ -1,6 +1,6 @@
-import './App.css'
-import Title from './Title'
-import Description from './Description'
+import './App.css';
+import Title from './Title';
+import Description from './Description';
 
 let root = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "./dark/" : "./";
 const socials = [
@@ -16,7 +16,7 @@ const socials = [
 		imagePath: "./linkedin.png",
 		name: "LinkedIn"
 	},
-]
+];
 const blurb = (
 	<>
 	<p>
@@ -41,7 +41,7 @@ function App() {
 	</div>
 	<p id="updateTag">Last updated May 2024</p>
 	</>
-	)
+	);
 }
 
 export default App
