@@ -1,25 +1,14 @@
 #root {
-  max-width: 1280px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-#updatetag {
-  font-size: 12pt;
-  opacity: 0.65;
+#updateTag {
+  font-size: 0.65em;
+  opacity: 0.50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.projects {
+  text-align: left;
 }

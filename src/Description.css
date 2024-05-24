@@ -1,0 +1,18 @@
+#description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#descriptionText {
+    text-align: left;
+    font-size: smaller;
+}
+
+#socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 1em;
+}

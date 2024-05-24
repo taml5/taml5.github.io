@@ -11,7 +11,7 @@ function Social({ url, imagePath, name }) {
     return (
         <a className={"social " + name.toLowerCase()} href={url} target="_blank">
                 <img className="logo" src={imagePath} />
-                <p>{name}</p>
+                <p id="socialText">{name}</p>
         </a>
     );
 }

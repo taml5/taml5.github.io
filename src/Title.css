@@ -1,0 +1,22 @@
+#titleCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#headshot {
+    width: 12%;
+    min-width: 100px;
+    border-radius: 50px;
+    margin: 0.5em;
+}
+
+#titleText {
+    text-align: left;
+    padding: 1em;
+}
+
+#titleText > h1, h2 {
+    margin: 0;
+}

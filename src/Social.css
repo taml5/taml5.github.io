@@ -1,11 +1,16 @@
 .social {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
+#socialText {
+    padding-left: 0.5em;
+    font-size: smaller;
+}
+
 .logo {
-    max-width: 50px;
+    max-width: 2em;
     height: auto;
 }
