@@ -1,16 +1,18 @@
 import './Project.css';
 
-/**
+/** A card component for a single project.
  * 
- * @param 
+ * @param {string} title 
+ * @param {string} imagePath 
+ * @param {string} description 
  */
-function Project({ title, imagePath, description }) {
+function Project({ title, imagePath, description, url }) {
     return (
-        <div className="projectCard">
+        <a className="projectCard" href={url} target='_blank'>
             <img src={imagePath} />
             <h3>{title}</h3>
             <p>{description}</p>
-        </div>
+        </a>
     );
 }
 

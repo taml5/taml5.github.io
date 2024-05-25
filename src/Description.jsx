@@ -20,9 +20,7 @@ function Description({ blurb, socials }) {
 			)}
 		    </div>
 			<div id="descriptionText">
-				<hr/>
 				{blurb}
-				<hr/>
 			</div>
         </div>
     );
