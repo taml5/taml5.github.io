@@ -29,7 +29,7 @@ export const projects = [
 		id: "website",
 		title: "Personal Website",
 		imagePath: root + "website.png",
-		description: (<>A personal website built in React. Heavily inspired by David Chuan-En Lin's website (https://chuanenlin.com/).</>),
+		description: (<>A personal website built in React. Heavily inspired by David Chuan-En Lin's <a href="https://chuanenlin.com/" target="_blank">website</a>.</>),
 		url: "https://github.com/taml5/website"
 	},
 	{
