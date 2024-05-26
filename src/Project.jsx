@@ -8,11 +8,11 @@ import './Project.css';
  */
 function Project({ title, imagePath, description, url }) {
     return (
-        <a className="projectCard" href={url} target='_blank'>
-            <img src={imagePath} />
+        <div className="projectCard">
+            <a href={url} target='_blank'><img src={imagePath}/></a>
             <h3>{title}</h3>
             <p>{description}</p>
-        </a>
+        </div>
     );
 }
 

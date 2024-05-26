@@ -18,7 +18,8 @@
 
 .projectCard img {
     border-radius: 30px;
-    padding: 1rem;
+    margin: 1rem;
+    max-width: 90%;
 }
 
 .projectCard h3 {
