@@ -1,4 +1,4 @@
-import Social from './Social';
+import Social from './Social.jsx';
 import './Description.css';
 
 /** The component responsible for display the social media links and the blurb.

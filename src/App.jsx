@@ -1,7 +1,7 @@
 import './App.css';
-import Title from './Title';
-import Description from './Description';
-import ProjectContainer from './ProjectContainer';
+import Title from './Title.jsx';
+import Description from './Description.jsx';
+import ProjectContainer from './ProjectContainer.jsx';
 import { blurb, socials, projects } from './data';
 
 function App() {

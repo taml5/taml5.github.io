@@ -1,4 +1,4 @@
-import Project from './Project';
+import Project from './Project.jsx';
 import './ProjectContainer.css';
 
 /** A component storing projects in a grid.
