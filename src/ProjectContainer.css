@@ -1,8 +1,7 @@
 .projectContainer {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 1rem;
-    column-gap: 0.5rem;
+    row-gap: 0.5rem;
     justify-content: center;
 }
 
@@ -10,7 +9,6 @@
     .projectContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        row-gap: 1rem;
         column-gap: 0.5rem;
     }
 }
