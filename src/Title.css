@@ -17,6 +17,22 @@
     padding: 1em;
 }
 
-#titleText > h1, h2 {
+#titleText h1 {
     margin: 0;
+    font-size: x-large;
+}
+
+#titleText h2 {
+    margin: 0;
+    font-size: large
+}
+
+@media screen and (min-width: 768px) {
+    #titleText h1 {
+        font-size: 2em;
+    }
+
+    #titleText h2 {
+        font-size: 1.5em;
+    }
 }
