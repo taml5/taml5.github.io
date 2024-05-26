@@ -20,7 +20,7 @@ export const blurb = (
 			I'm a rising third year in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
 		</p>
 		<p>
-			Currently working on... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 		</p>
 	</>
 );
@@ -29,7 +29,7 @@ export const projects = [
 		id: "website",
 		title: "Personal Website",
 		imagePath: root + "website.png",
-		description: (<>A personal website built in React. Heavily inspired by David Chuan-En Lin's <a href="https://chuanenlin.com/" target="_blank">website</a>.</>),
+		description: (<>A personal website built in React. Inspired by David Chuan-En Lin's <a href="https://chuanenlin.com/" target="_blank">website</a>.</>),
 		url: "https://github.com/taml5/website"
 	},
 	{
@@ -38,5 +38,12 @@ export const projects = [
 		imagePath: "./game.png",
 		description: (<>A game engine to render text-based adventure games in the style of <em>Zork</em> (1989) and Infocom games.</>),
 		url: "https://github.com/taml5/adventure_game"
+	},
+	{
+		id: "benson",
+		title: "Healthcare Chatbot",
+		imagePath: "./benson.png",
+		description: (<>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</>),
+		url: "https://github.com/Accusamus2065/Easy-Healthcare"
 	}
 ];
