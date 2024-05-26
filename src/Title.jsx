@@ -9,7 +9,7 @@ function Title() {
             <img id="headshot" src="./f3.jpg"/>
             <div id="titleText">
                 <h1>Dexter Tam Long Hang</h1>
-                <h2><code>dexter.tam[at]mail.utoronto.ca</code></h2>
+                <h2><code>dexter.tam [at] mail.utoronto.ca</code></h2>
             </div>
         </div>
         </>
