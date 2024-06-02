@@ -26,6 +26,13 @@ export const blurb = (
 );
 export const projects = [
 	{
+		id: "RSSReader",
+		title: "Dingbat: RSS Reader",
+		imagePath: "./rss.png",
+		description: (<>An RSS reader, built using Python and SQLite for the backend and ReactJS (Typescript, SCSS) for the frontend.</>),
+		url: "https://github.com/taml5/rss-reader"
+	},
+	{
 		id: "website",
 		title: "Personal Website",
 		imagePath: root + "website.png",
