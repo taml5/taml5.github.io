@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Dexter Tam">
+	<main>
+		<div id="title">
+			<code>dexter.tam [at] mail.utoronto.ca</code>
+			<h1>Dexter Tam Long Hang</h1>
+		</div>
+		<div id="blurb">
+			<div id="media">
+				<a href="https://www.linkedin.com/in/dexter-tam/" target="_blank"><img src="github-mark.svg"/></a>
+				<a href="https://github.com/taml5" target="_blank"><img src="linkedin.png"/></a>
+			</div>
+			<p>
+				I'm a rising third year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
+			</p>
+		</div>
+		<div id="projects">
+			<hr>
+			<ul>
+				<Card
+					href="https://github.com/taml5/mnist"
+					title="MNIST Neural Network"
+					body="A graphical interface to interact with a feedforward neural network recognising handwritten digits from the MNIST dataset."
+					img="./mnist.png"
+				/>
+				<Card
+					href="https://github.com/taml5/engine"
+					title="2.5D Raycaster Engine"
+					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
+					img="./graphics.png"
+				/>
+				<Card
+					href="https://github.com/taml5/rss-reader"
+					title="RSS Reader"
+					body="An RSS reader built using Python and SQLite for the backend and ReactJS (Typescript, SCSS) for the frontend."
+					img="./rss.png"
+				/>
+				<Card
+					href="https://github.com/Accusamus2065/Easy-Healthcare"
+					title="AI Healthcare Chatbot"
+					body="Chatbot aimed to connect patients to doctors through a simple preliminary diagnosis using AI. The capstone group project for CSC207 at UofT."
+					img="./benson.png"
+				/>
+			</ul>
+		</div>
+		<div id="impressum">
+
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 768px;
+		margin: 0 auto;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+	#title {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+		h1 {
+			font-size: x-large;
+			margin-bottom: 0.5rem;
+		}
+		code {
+			font-size:x-small;
+		}
+	}
+	#media {
+		img {
+			max-height: 1.5rem;
+			margin-inline: 0.2rem;
+			filter: grayscale(1) contrast(100) brightness(1);
+		}
+	}
+	#blurb {
+		font-size: x-small;
+		text-align: center;
+	}
+	#projects > ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+
+	@media only screen and (min-width: 768px) {
+		#title {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			h1 {
+				font-size: 60px;
+				margin-block: 0.5rem 0;
+			}
+			code {
+				font-size: medium;
+			}
+		}
+		#blurb {
+			font-size: medium;
+			text-align: left;
+		}
+	}
+</style>

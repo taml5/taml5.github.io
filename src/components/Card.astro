@@ -1,0 +1,55 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+	img: string;
+}
+
+const { href, title, body, img } = Astro.props;
+---
+
+<li class="link-card">
+	<img src={img} id="image">
+	<h2>
+		{title}
+		<a href={href} target="_blank"><img src="./github-mark.svg"/></a>
+	</h2>
+	<p>{body}</p>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		border-radius: 10px;
+		padding: 1rem;
+		transition: background-color 0.2s ease;
+	}
+	#image {
+		aspect-ratio: 4 / 3;
+		width: 100%;
+		border-radius: 10px;
+		object-fit: cover;
+		object-position: top;
+    	overflow: hidden;
+	}
+	h2 {
+		margin-block: 0.5rem;
+	}
+	a {
+		display: inline-block;
+		height: 100%;
+		vertical-align:middle;
+
+		img {
+			display: inline-block;
+			height: 1.5rem;
+		}
+	}	
+	
+	p {
+		font-size: smaller;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-color: #e3f2fd;
+	}
+</style>
