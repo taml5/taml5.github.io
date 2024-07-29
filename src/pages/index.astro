@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Social from '../components/Social.astro';
 ---
 
 <Layout title="Dexter Tam">
@@ -11,8 +12,8 @@ import Card from '../components/Card.astro';
 		</div>
 		<div id="blurb">
 			<div id="media">
-				<a href="https://www.linkedin.com/in/dexter-tam/" target="_blank"><img src="github-mark.svg"/></a>
-				<a href="https://github.com/taml5" target="_blank"><img src="linkedin.png"/></a>
+				<Social href="https://github.com/taml5" img="github-mark.svg" name="GitHub"/>
+				<Social href="https://www.linkedin.com/in/dexter-tam/" img="./linkedin.png" name="LinkedIn" />
 			</div>
 			<p>
 				I'm a rising third year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
@@ -76,11 +77,10 @@ import Card from '../components/Card.astro';
 		}
 	}
 	#media {
-		img {
-			max-height: 1.5rem;
-			margin-inline: 0.2rem;
-			filter: grayscale(1) contrast(100) brightness(1);
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 1rem;
 	}
 	#blurb {
 		font-size: x-small;
@@ -105,6 +105,13 @@ import Card from '../components/Card.astro';
 			code {
 				font-size: medium;
 			}
+		}
+		#media {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			gap: 1rem;
+			padding-bottom: 1rem;
 		}
 		#blurb {
 			font-size: medium;
