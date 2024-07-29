@@ -68,32 +68,37 @@ import Social from '../components/Social.astro';
 
 <style>
 	main {
-		max-width: 768px;
-		margin: 0 auto;
-		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		max-width: 768px;
+		margin: 0 auto;
+		padding: 2rem;
 	}
+
 	#title {
+		align-items: center;
 		display: flex;
 		flex-direction: column-reverse;
-		align-items: center;
 		text-align: center;
+
+		code {
+			font-size:x-small;
+		}
+
 		h1 {
 			font-size: xx-large;
 			margin-bottom: 0.5rem;
 		}
-		code {
-			font-size:x-small;
-		}
 	}
+
 	#media {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
 		gap: 1rem;
+		justify-content: center;
 	}
+
 	#blurb {
 		font-size: x-small;
 		text-align: center;
@@ -103,44 +108,50 @@ import Social from '../components/Social.astro';
 			border-radius: 50%;
 		}
 	}
+
 	#projects > ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
 	}
+
 	#colophon {
-		text-align: center;
-		opacity: 20%;
 		font-size: xx-small;
+		opacity: 20%;
+		text-align: center;
 	}
 
 	@media only screen and (min-width: 768px) {
 		#title {
+			align-items: flex-start;
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
+
+			code {
+				font-size: medium;
+			}
+
 			h1 {
 				font-size: 60px;
 				margin-block: 0.5rem 0;
 			}
-			code {
-				font-size: medium;
-			}
 		}
+
 		#media {
 			display: flex;
 			flex-direction: row;
-			justify-content: flex-start;
 			gap: 1rem;
+			justify-content: flex-start;
 			padding-bottom: 1rem;
 		}
+
 		#blurb {
+			align-items: center;
 			display: flex;
 			font-size: medium;
-			text-align: right;
 			gap: 2rem;
-			align-items: center;
+			text-align: right;
 
 			img {
 				padding: 1rem;

@@ -15,21 +15,25 @@ const { href, img, name } = Astro.props;
 
 <style>
     a {
-        text-decoration: none;
-        display: flex;
         align-items: center;
+        display: flex;
         gap: 0.2rem;        
+        text-decoration: none;
     }
-    a:visited {
-        color:#000000;
-    }
+
     a:link {
         color: #000000;
     }
-    img {
-			max-height: 1rem;
-			margin-inline: 0.2rem;
+
+    a:visited {
+        color: #000000;
     }
+
+    img {
+        margin-inline: 0.2rem;
+        max-height: 1rem;
+    }
+
     p {
         font-size: smaller;
     }

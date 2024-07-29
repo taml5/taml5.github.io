@@ -21,27 +21,34 @@ const { href, title, body, img, tech } = Astro.props;
 </li>
 <style>
 	.link-card {
-		list-style: none;
 		border-radius: 10px;
+		list-style: none;
 		padding: 1rem;
 		transition: background-color 0.2s ease;
 	}
+
+	.link-card:is(:hover, :focus-within) {
+		background-color: #d46d7a32;
+	}
+
 	#image {
 		aspect-ratio: 4 / 3;
-		width: 100%;
 		border-radius: 10px;
 		object-fit: cover;
 		object-position: top;
     	overflow: hidden;
+		width: 100%;
 	}
+
 	h2 {
 		margin-block: 0.5rem;
 	}
+
 	a {
 		display: inline-block;
 		height: 100%;
-		vertical-align:middle;
 		padding-inline: 0.2rem;
+		vertical-align: middle;
 
 		img {
 			display: inline-block;
@@ -52,10 +59,8 @@ const { href, title, body, img, tech } = Astro.props;
 	p {
 		font-size: smaller;
 	}
+
 	#tech {
 		margin: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-color: rgba(212,109,122, 0.2);
 	}
 </style>
