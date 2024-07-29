@@ -10,14 +10,20 @@ import Social from '../components/Social.astro';
 			<code>dexter.tam [at] mail.utoronto.ca</code>
 			<h1>Dexter Tam Long Hang</h1>
 		</div>
+		<div id="media">
+			<Social href="https://github.com/taml5" img="github-mark.svg" name="GitHub"/>
+			<Social href="https://www.linkedin.com/in/dexter-tam/" img="./linkedin.png" name="LinkedIn" />
+		</div>
 		<div id="blurb">
-			<div id="media">
-				<Social href="https://github.com/taml5" img="github-mark.svg" name="GitHub"/>
-				<Social href="https://www.linkedin.com/in/dexter-tam/" img="./linkedin.png" name="LinkedIn" />
+			<img src="./f3.jpg">
+			<div>
+				<p>
+					I'm a rising third year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
+				</p>
+				<p>
+					Recently, I've been exploring web development, computer graphics, and machine learning. I'd like to In my free time, I like to play the classical guitar and play video games.
+				</p>
 			</div>
-			<p>
-				I'm a rising third year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
-			</p>
 		</div>
 		<div id="projects">
 			<hr>
@@ -27,29 +33,35 @@ import Social from '../components/Social.astro';
 					title="MNIST Neural Network"
 					body="A graphical interface to interact with a feedforward neural network recognising handwritten digits from the MNIST dataset."
 					img="./mnist.png"
+					tech="Python, numpy, ReactJS"
 				/>
 				<Card
 					href="https://github.com/taml5/engine"
 					title="2.5D Raycaster Engine"
 					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
 					img="./graphics.png"
+					tech="C, GLFW"
 				/>
 				<Card
 					href="https://github.com/taml5/rss-reader"
-					title="RSS Reader"
+					title="RSS Subscription Manager"
 					body="An RSS reader built using Python and SQLite for the backend and ReactJS (Typescript, SCSS) for the frontend."
 					img="./rss.png"
+					tech="Python, SQLite, ReactJS"
 				/>
 				<Card
 					href="https://github.com/Accusamus2065/Easy-Healthcare"
 					title="AI Healthcare Chatbot"
-					body="Chatbot aimed to connect patients to doctors through a simple preliminary diagnosis using AI. The capstone group project for CSC207 at UofT."
+					body="Chatbot aimed to connect patients to doctors through a simple preliminary diagnosis using AI. The final group project for CSC207 at UofT."
 					img="./benson.png"
+					tech="Java, DialogFlow, MongoDB"
 				/>
 			</ul>
 		</div>
-		<div id="impressum">
-
+		<div id="colophon">
+			<p>
+				Updated Jul 2024
+			</p>
 		</div>
 	</main>
 </Layout>
@@ -69,7 +81,7 @@ import Social from '../components/Social.astro';
 		align-items: center;
 		text-align: center;
 		h1 {
-			font-size: x-large;
+			font-size: xx-large;
 			margin-bottom: 0.5rem;
 		}
 		code {
@@ -85,12 +97,22 @@ import Social from '../components/Social.astro';
 	#blurb {
 		font-size: x-small;
 		text-align: center;
+
+		img {
+			width: 50%;
+			border-radius: 50%;
+		}
 	}
 	#projects > ul {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+	#colophon {
+		text-align: center;
+		opacity: 20%;
+		font-size: xx-small;
 	}
 
 	@media only screen and (min-width: 768px) {
@@ -114,8 +136,16 @@ import Social from '../components/Social.astro';
 			padding-bottom: 1rem;
 		}
 		#blurb {
+			display: flex;
 			font-size: medium;
-			text-align: left;
+			text-align: right;
+			gap: 2rem;
+			align-items: center;
+
+			img {
+				max-width: 25%;
+				border-radius: 50%;
+			}
 		}
 	}
 </style>

@@ -4,9 +4,10 @@ interface Props {
 	body: string;
 	href: string;
 	img: string;
+	tech?: string;
 }
 
-const { href, title, body, img } = Astro.props;
+const { href, title, body, img, tech } = Astro.props;
 ---
 
 <li class="link-card">
@@ -16,6 +17,7 @@ const { href, title, body, img } = Astro.props;
 		<a href={href} target="_blank"><img src="./github-mark.svg"/></a>
 	</h2>
 	<p>{body}</p>
+	<p><small><em>{tech}</em></small></p>
 </li>
 <style>
 	.link-card {
@@ -39,10 +41,11 @@ const { href, title, body, img } = Astro.props;
 		display: inline-block;
 		height: 100%;
 		vertical-align:middle;
+		padding-inline: 0.2rem;
 
 		img {
 			display: inline-block;
-			height: 1.5rem;
+			height: 1.8rem;
 		}
 	}	
 	
@@ -50,6 +53,6 @@ const { href, title, body, img } = Astro.props;
 		font-size: smaller;
 	}
 	.link-card:is(:hover, :focus-within) {
-		background-color: #e3f2fd;
+		background-color: rgba(212,109,122, 0.2);
 	}
 </style>
