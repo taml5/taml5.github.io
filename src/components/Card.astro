@@ -17,7 +17,7 @@ const { href, title, body, img, tech } = Astro.props;
 		<a href={href} target="_blank"><img src="./github-mark.svg"/></a>
 	</h2>
 	<p>{body}</p>
-	<p><small><em>{tech}</em></small></p>
+	<p id="tech"><small><em>{tech}</em></small></p>
 </li>
 <style>
 	.link-card {
@@ -51,6 +51,9 @@ const { href, title, body, img, tech } = Astro.props;
 	
 	p {
 		font-size: smaller;
+	}
+	#tech {
+		margin: 0;
 	}
 	.link-card:is(:hover, :focus-within) {
 		background-color: rgba(212,109,122, 0.2);
