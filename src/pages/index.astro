@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import Social from '../components/Social.astro';
 ---
 
 <Layout title="Dexter Tam">
@@ -11,8 +10,12 @@ import Social from '../components/Social.astro';
 			<h1>Dexter Tam Long Hang</h1>
 		</div>
 		<div id="media">
-			<Social href="https://github.com/taml5" img="github-mark.svg" name="GitHub"/>
-			<Social href="https://www.linkedin.com/in/dexter-tam/" img="./linkedin.png" name="LinkedIn" />
+			<a href="https://github.com/taml5" target="_blank" class="social">
+				<img src="./github-outline.svg"/>
+			</a>
+			<a href="https://www.linkedin.com/in/dexter-tam/" target="_blank" class="social">
+				<img src="./linkedin-outline.svg"/>
+			</a>
 		</div>
 		<div id="blurb">
 			<img src="./f3.jpg">
@@ -60,7 +63,7 @@ import Social from '../components/Social.astro';
 		</div>
 		<div id="colophon">
 			<p>
-				Updated Jul 2024
+				Updated Aug 2024
 			</p>
 		</div>
 	</main>
@@ -97,6 +100,10 @@ import Social from '../components/Social.astro';
 		flex-direction: row;
 		gap: 1rem;
 		justify-content: center;
+
+		.social img {
+			max-width: 2rem;
+		}
 	}
 
 	#blurb {
@@ -141,9 +148,8 @@ import Social from '../components/Social.astro';
 		#media {
 			display: flex;
 			flex-direction: row;
-			gap: 1rem;
+			gap: 0.5rem;
 			justify-content: flex-start;
-			padding-bottom: 1rem;
 		}
 
 		#blurb {

@@ -14,7 +14,7 @@ const { href, title, body, img, tech } = Astro.props;
 	<img src={img} id="image">
 	<h2>
 		{title}
-		<a href={href} target="_blank"><img src="./github-mark.svg"/></a>
+		<a href={href} target="_blank"><img src="./github-outline.svg"/></a>
 	</h2>
 	<p>{body}</p>
 	<p id="tech"><small><em>{tech}</em></small></p>
@@ -47,7 +47,6 @@ const { href, title, body, img, tech } = Astro.props;
 	a {
 		display: inline-block;
 		height: 100%;
-		padding-inline: 0.2rem;
 		vertical-align: middle;
 
 		img {
