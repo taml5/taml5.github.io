@@ -2,19 +2,21 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
+	github?: string;
+	href?: string;
 	img: string;
 	tech?: string;
 }
 
-const { href, title, body, img, tech } = Astro.props;
+const { github, href, title, body, img, tech } = Astro.props;
 ---
 
 <li class="link-card">
 	<img src={img} id="image">
 	<h2>
 		{title}
-		<a href={href} target="_blank"><img src="./github-outline.svg"/></a>
+		{href && (<a href={href} target="_blank"><img src="./link.svg"/></a>)}
+		{github && (<a href={github} target="_blank"><img src="./github-outline.svg"/></a>)}
 	</h2>
 	<p>{body}</p>
 	<p id="tech"><small><em>{tech}</em></small></p>

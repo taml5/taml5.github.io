@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Dexter Tam">
+<Layout>
 	<main>
 		<div id="title">
 			<code>dexter.tam [at] mail.utoronto.ca</code>
@@ -21,10 +21,10 @@ import Card from '../components/Card.astro';
 			<img src="./f3.jpg">
 			<div>
 				<p>
-					I'm currently a third year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy.
+					I'm a rising fourth year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy. Currently, I'm on my work year as an Intern Developer at Jamieson Wellness.
 				</p>
 				<p>
-					Recently, I've been exploring web development, computer graphics, and machine learning. In my free time, I like to play the classical guitar and some video games.
+					Recently, I've been exploring web development, computer graphics, and machine learning. In my free time, I like to play the classical guitar and video games. I've also been a part of the Kendo club at UofT this year.
 				</p>
 			</div>
 		</div>
@@ -32,38 +32,45 @@ import Card from '../components/Card.astro';
 			<hr>
 			<ul>
 				<Card
-					href="https://github.com/taml5/mnist"
+					title="LLM Practice Exam Generator"
+					body="A full-stack LLM-based application to generate practice maths questions based on previous exams. The final group project for CSC301 at UofT."
+					img="./csc301.png"
+					href="https://avgr.vercel.app/"
+					tech="Python, Gemini, Cohere, Flask, PostgreSQL"
+				/>
+				<Card
 					title="MNIST Neural Network"
 					body="A graphical interface to interact with a feedforward neural network recognising handwritten digits from the MNIST dataset."
 					img="./mnist.png"
+					github="https://github.com/taml5/mnist"
 					tech="Python, numpy, ReactJS"
 				/>
 				<Card
-					href="https://github.com/taml5/engine"
 					title="2.5D Raycaster Engine"
 					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
 					img="./graphics.png"
+					github="https://github.com/taml5/engine"
 					tech="C, GLFW"
 				/>
 				<Card
-					href="https://github.com/taml5/rss-reader"
 					title="RSS Subscription Manager"
 					body="An RSS reader built using Python and SQLite for the backend and ReactJS (Typescript, SCSS) for the frontend."
 					img="./rss.png"
+					github="https://github.com/taml5/rss-reader"
 					tech="Python, SQLite, ReactJS"
 				/>
 				<Card
-					href="https://github.com/Accusamus2065/Easy-Healthcare"
 					title="AI Healthcare Chatbot"
 					body="Chatbot aimed to connect patients to doctors through a simple preliminary diagnosis using AI. The final group project for CSC207 at UofT."
 					img="./benson.png"
+					github="https://github.com/Accusamus2065/Easy-Healthcare"
 					tech="Java, DialogFlow, MongoDB"
 				/>
 			</ul>
 		</div>
 		<div id="colophon">
 			<p>
-				Updated Aug 2024 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
+				Updated Mar 2025 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
 			</p>
 		</div>
 	</main>
