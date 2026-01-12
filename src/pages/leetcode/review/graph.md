@@ -1,3 +1,7 @@
+---
+layout: ../../../layouts/Leetcode.astro
+---
+
 # Graphs
 There are two main methods of searching a graph:
 1. **Breadth-first search (BFS).** The graph is searched across the breadth of the frontier between discovered and undiscovered nodes uniformly; encountered nodes are prioritised.

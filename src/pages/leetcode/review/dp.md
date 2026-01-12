@@ -1,3 +1,7 @@
+---
+layout: ../../../layouts/Leetcode.astro
+---
+
 # Dynamic Programming
 
 Dynamic programming (DP) problems have 2 key properties:
@@ -17,12 +21,14 @@ Notice we can only take 1 step or 2 steps, so we can work our way backwards by c
 - Notice that we are *not* counting ways to reach the $n$th step from the $n-1$th or $n-2$th step. On the $n-2$th step, we could take two 1 steps to reach the $n$th step, but we should not count that way, since we would be double counting: the last action is to take 1 step, so it should already be included when calculating $OPT(n-1)$.
 The only thing left to do is to sum the distinct ways up: $OPT(n) = OPT(n - 1) + OPT(n - 2)$.
 
-Like other recursive relations, we also need to calculate the base cases: in this case, there is 1 way to climb 0 steps (by doing nothing!), and 1 to climb 1 step. We have achieved the full Bellman equation:
-$$ OPT(n) = \begin{cases}
+Like other recursive relations, we also need to calculate the base cases: in this case, there is 1 way to climb 0 steps (by doing nothing!), and 1 to climb 1 step. We now have the full Bellman equation:
+$$ 
+OPT(n) = \begin{cases}
 1 & n = 0 \\
 1 & n = 1 \\
 OPT(n - 1) + OPT(n - 2) & \text{otherwise}
-\end{cases}$$
+\end{cases}
+$$
 Notice that subproblems overlap in our relation. In calculating $OPT(n-1)$ when $n > 1$, we also need the solution for $OPT(n - 2)$. If we write the code for the Bellman equation without any optimisation, we will calculate the same solutions multiple times.
 # Memoisation
 To address this, we simply need to store the solution for a sub-problem somewhere once we have calculated it. Typically, this takes the form of an array if there is one input variable, or a matrix if there are two or more input variables. The next time the sub-problem is encountered, we can then look up the solution (if it exists) in constant time—in effect only calculating the sub-solution only once.
@@ -70,4 +76,4 @@ This is the main difference between the two.
 # Time Complexity
 The complexity depends on the nature of the problem, but is usually a polynomial of the input array or matrix.
 
-In the above example, consider the complexity of the bottom-up approach. There is a for loop of complexity $\mathcal{O}(n)$, and each iteration is constant time. The top-down approach is the same: 
+In the above example, consider the complexity of the bottom-up approach. There is a for loop of complexity $\mathcal{O}(n)$, and each iteration is constant time. The top-down approach is the same: each recursive call is constant time, and in the worst case we reach all inputs from 0 to n, only once due to memoisation.
