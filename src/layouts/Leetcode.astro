@@ -1,0 +1,55 @@
+---
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Leetcode problems and solutions" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="./favicon.png?" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>Leetcode</title>
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+    html {
+		background: #ffffff;
+		color: #000000;
+		font-family: "Helvetica Neue", system-ui, sans-serif;
+	}
+
+    code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	body {
+		max-width: 768px;
+		margin:0 auto;
+	}
+
+
+    pre {
+        margin-block: 1rem;
+        padding: 1rem;
+    }
+</style>
