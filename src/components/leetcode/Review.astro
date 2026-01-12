@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string;
+    href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<li class="review-card">
+    <a href={href}>
+        <span class="title">{title}</span>
+    </a>
+</li>
+
+<style>
+    .review-card {
+        border-radius: 10px;
+        list-style: none;
+        margin: 0.5rem 0;
+        transition: background-color 0.2s ease;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+        }
+    }
+
+    .review-card:is(:hover, :focus-within) {
+		background-color: #d46d7a32;
+	}
+</style>

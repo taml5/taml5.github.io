@@ -1,9 +1,10 @@
 ---
-import Home from '../layouts/Home.astro';
+import Layout from '../layouts/BaseLayout.astro';
+
 import Card from '../components/Card.astro';
 ---
 
-<Home>
+<Layout>
 	<main>
 		<div id="title">
 			<code>dexter.tam [at] mail.utoronto.ca</code>
@@ -76,7 +77,7 @@ import Card from '../components/Card.astro';
 			</p>
 		</div>
 	</main>
-</Home>
+</Layout>
 
 <style>
 	main {
