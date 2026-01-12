@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Home from '../layouts/Home.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout>
+<Home>
 	<main>
 		<div id="title">
 			<code>dexter.tam [at] mail.utoronto.ca</code>
@@ -32,6 +32,13 @@ import Card from '../components/Card.astro';
 			<hr>
 			<ul>
 				<Card
+					title="2.5D Raycaster Engine"
+					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
+					img="./graphics.png"
+					github="https://github.com/taml5/engine"
+					tech="C, GLFW"
+				/>
+				<Card
 					title="LLM Practice Exam Generator"
 					body="A full-stack LLM-based application to generate practice maths questions based on previous exams. The final group project for CSC301 at UofT."
 					img="./csc301.png"
@@ -44,13 +51,6 @@ import Card from '../components/Card.astro';
 					img="./mnist.png"
 					github="https://github.com/taml5/mnist"
 					tech="Python, numpy, ReactJS"
-				/>
-				<Card
-					title="2.5D Raycaster Engine"
-					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
-					img="./graphics.png"
-					github="https://github.com/taml5/engine"
-					tech="C, GLFW"
 				/>
 				<Card
 					title="RSS Subscription Manager"
@@ -68,20 +68,22 @@ import Card from '../components/Card.astro';
 				/>
 			</ul>
 		</div>
+		<div id="leetcode">
+			<a href="/leetcode/"> Leetcode </a>
+		</div>
 		<div id="colophon">
 			<p>
-				Updated May 2025 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
+				Updated Jan 2026 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
 			</p>
 		</div>
 	</main>
-</Layout>
+</Home>
 
 <style>
 	main {
 		display: flex;
 		flex-direction: column;
 		gap: 0;
-		max-width: 768px;
 		margin: 0 auto;
 		padding: 2rem;
 	}
@@ -133,6 +135,15 @@ import Card from '../components/Card.astro';
 			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 			gap: 1rem;
 			padding: 0;
+		}
+	}
+
+	#leetcode {
+		margin-top: 2rem;
+
+		a {
+			text-decoration: none;
+			font-size: large;
 		}
 	}
 
