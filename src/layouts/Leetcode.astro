@@ -1,5 +1,19 @@
 ---
 import Header from '../components/Header.astro';
+import Pagination from '../components/leetcode/Pagination.astro';
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const {category, index} = Astro.props;
+
+const sameCategory: CollectionEntry<"leetcode">[] = await getCollection('leetcode', ({ data }) => {
+  return data.category == category;
+})
+
+sameCategory.sort((a, b) => a.data.order - b.data.order);
+const prev = sameCategory[index - 1] || null;
+const next = sameCategory[index + 1] || null;
 ---
 
 <!doctype html>
@@ -16,6 +30,7 @@ import Header from '../components/Header.astro';
 	<body>
 		<Header />
 		<slot />
+		<Pagination { ...{ prev, next } } />
 	</body>
 </html>
 

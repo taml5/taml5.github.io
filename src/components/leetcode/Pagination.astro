@@ -1,0 +1,32 @@
+---
+const { prev, next } = Astro.props;
+---
+
+<nav class="pagination">
+  {prev && (
+    <a class="prev" href={`/leetcode/${prev.slug}/`}>
+      ← {prev.data.title}
+    </a>
+  )}
+  {next && (
+    <a class="next" href={`/leetcode/${next.slug}/`}>
+      {next.data.title} →
+    </a>
+  )}
+</nav>
+
+<style>
+  .pagination {
+    display: flex;
+    justify-content: space-between; /* pushes first item left, last item right */
+    margin: 2rem 0;
+  }
+
+  .prev {
+    margin-right: auto; /* pushes next to the right */
+  }
+
+  .next {
+    margin-left: auto; /* ensures it goes right if prev is missing */
+  }
+</style>

@@ -1,5 +1,7 @@
 ---
-layout: ../../../layouts/Leetcode.astro
+category: review
+order: 1
+title: Graphs
 ---
 
 # Graphs

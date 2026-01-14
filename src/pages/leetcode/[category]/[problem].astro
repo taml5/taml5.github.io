@@ -1,0 +1,31 @@
+---
+// [category]/[problem].astro
+
+import Layout from '../../../layouts/Leetcode.astro';
+
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("leetcode");
+
+  return posts.map((post) => ({
+    params: { category: post.slug.split("/")[0],
+              problem: post.slug.split("/")[1]
+     },
+    props: { entry: post },
+  }));
+}
+
+const { entry } = Astro.props as {
+  entry: CollectionEntry<"leetcode">;
+};
+
+// Render markdown using its layout
+const { Content } = await entry.render();
+---
+
+<Layout category = {entry.data.category} index = {entry.data.order}>
+    <Content />
+</Layout>
+

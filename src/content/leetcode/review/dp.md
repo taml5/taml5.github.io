@@ -1,5 +1,7 @@
 ---
-layout: ../../../layouts/Leetcode.astro
+category: review
+order: 0
+title: Dynamic Programming
 ---
 
 # Dynamic Programming
