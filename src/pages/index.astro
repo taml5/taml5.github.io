@@ -1,5 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/BaseLayout.astro';
+
 import Card from '../components/Card.astro';
 ---
 
@@ -21,7 +22,7 @@ import Card from '../components/Card.astro';
 			<img src="./f3.jpg">
 			<div>
 				<p>
-					I'm a rising fourth year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy. Currently, I'm on my work year as an Intern Developer at Jamieson Wellness.
+					I'm a fourth year undergraduate in the University of Toronto, specialising in Computer Science with a minor in Philosophy. Currently, I'm on my work year as an Intern Developer at Jamieson Wellness.
 				</p>
 				<p>
 					Recently, I've been exploring web development, computer graphics, and machine learning. In my free time, I like to play the classical guitar and video games. I've also been a part of the Kendo club at UofT this year.
@@ -32,11 +33,11 @@ import Card from '../components/Card.astro';
 			<hr>
 			<ul>
 				<Card
-					title="LLM Practice Exam Generator"
-					body="A full-stack LLM-based application to generate practice maths questions based on previous exams. The final group project for CSC301 at UofT."
-					img="./csc301.png"
-					href="https://avgr.vercel.app/"
-					tech="Python, Gemini, Cohere, Flask, PostgreSQL"
+					title="2.5D Raycaster Engine"
+					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
+					img="./graphics.png"
+					github="https://github.com/taml5/engine"
+					tech="C, GLFW"
 				/>
 				<Card
 					title="MNIST Neural Network"
@@ -46,11 +47,10 @@ import Card from '../components/Card.astro';
 					tech="Python, numpy, ReactJS"
 				/>
 				<Card
-					title="2.5D Raycaster Engine"
-					body="A 2.5D graphics engine in the style of Doom, with lighting, texture mapping, and 1-bit styling."
-					img="./graphics.png"
-					github="https://github.com/taml5/engine"
-					tech="C, GLFW"
+					title="LLM Practice Exam Generator"
+					body="A full-stack LLM-based application to generate practice maths questions based on previous exams. The final group project for CSC301 at UofT."
+					img="./csc301.png"
+					tech="Python, Gemini, Cohere, Flask, PostgreSQL"
 				/>
 				<Card
 					title="RSS Subscription Manager"
@@ -68,9 +68,12 @@ import Card from '../components/Card.astro';
 				/>
 			</ul>
 		</div>
+		<div id="leetcode">
+			I have some leetcode solution writeups <a href="/leetcode/"> here</a>.
+		</div>
 		<div id="colophon">
 			<p>
-				Updated May 2025 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
+				Updated Jan 2026 | Powered by <a href="https://astro.build/" target="_blank">Astro</a>
 			</p>
 		</div>
 	</main>
@@ -81,7 +84,6 @@ import Card from '../components/Card.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 0;
-		max-width: 768px;
 		margin: 0 auto;
 		padding: 2rem;
 	}
@@ -136,8 +138,13 @@ import Card from '../components/Card.astro';
 		}
 	}
 
+	#leetcode {
+		padding-block: 2rem;
+		font-size: large;
+	}
+
 	#colophon {
-		font-size: xx-small;
+		font-size: x-small;
 		opacity: 20%;
 		text-align: center;
 	}
