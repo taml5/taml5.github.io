@@ -4,9 +4,6 @@
     "leetcode": {
       "type": "object",
       "properties": {
-        "order": {
-          "type": "number"
-        },
         "title": {
           "type": "string"
         },
@@ -25,14 +22,30 @@
             "trees"
           ]
         },
+        "number": {
+          "type": "number"
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "Easy",
+            "Medium",
+            "Hard"
+          ]
+        },
+        "order": {
+          "type": "number"
+        },
         "$schema": {
           "type": "string"
         }
       },
       "required": [
-        "order",
         "title",
-        "category"
+        "category",
+        "number",
+        "difficulty",
+        "order"
       ],
       "additionalProperties": false
     }

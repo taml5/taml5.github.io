@@ -1,9 +1,31 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
+import Layout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Question from "../../components/leetcode/Question.astro";
 import Review from "../../components/leetcode/Review.astro";
+
+const categories = [
+    "arrays",
+    "dp",
+    "graphs",
+    "heaps",
+    "intervals",
+    "linked-lists",
+    "review",
+    "matrices",
+    "strings",
+    "trees",
+];
+const questionsByCategory: Record<string, CollectionEntry<"leetcode">[]> = {};
+
+for (const category of categories) {
+    questionsByCategory[category] = (await getCollection(
+        'leetcode', ({ data }) => data.category === category
+    )).sort((a, b) => a.data.order - b.data.order);
+}   
 ---
 
 <Layout>
@@ -12,96 +34,55 @@ import Review from "../../components/leetcode/Review.astro";
     </p>
     <h1>Arrays</h1>
     <ul>
-        <Question 
-            number={88} 
-            title="Merge Sorted Array" 
-            difficulty="Easy" 
-            href="/leetcode/arrays/88"
-        />
-        <Question 
-            number={121} 
-            title="Best Time to Buy and Sell Stock" 
-            difficulty="Easy" 
-            href="/leetcode/arrays/121"
-        />
-        <Question
-            number={217}
-            title="Contains Duplicate"
-            difficulty="Easy"
-            href="/leetcode/arrays/217"
-        />
-        <Question 
-            number={11} 
-            title="Container With Most Water" 
-            difficulty="Medium" 
-            href="/leetcode/arrays/11"
-        />
-        <Question 
-            number={53} 
-            title="Maximum Subarray" 
-            difficulty="Medium" 
-            href="/leetcode/arrays/53"
-        />
-        <Question
-            number={238}
-            title="Product of Array Except Self"
-            difficulty="Medium"
-            href="/leetcode/arrays/238"
-        />
+        {
+            questionsByCategory['arrays'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
     </ul>
     <h1>Dynamic Programming</h1>
     <ul>
-        <Question 
-            number={70} 
-            title="Climbing Stairs" 
-            difficulty="Easy" 
-            href="/leetcode/dp/70"
-        />
-        <Question
-            number={152}
-            title="Maximum Product Subarray"
-            difficulty="Medium"
-            href="/leetcode/dp/152"
-        />
-        <Question 
-            number={198} 
-            title="House Robber" 
-            difficulty="Medium" 
-            href="/leetcode/dp/198"
-        />
-        <Question 
-            number={322} 
-            title="Coin Change" 
-            difficulty="Medium" 
-            href="/leetcode/dp/322"
-        />
-        <Question 
-            number={377} 
-            title="Combination Sum IV" 
-            difficulty="Medium" 
-            href="/leetcode/dp/377"
-        />
+        {
+            questionsByCategory['dp'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
+    </ul>
+    <h1>Heaps</h1>
+    <ul>
+        {
+            questionsByCategory['heaps'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
     </ul>
     <h1>Trees</h1>
     <ul>
-        <Question 
-            number={100} 
-            title="Same Tree" 
-            difficulty="Easy" 
-            href="/leetcode/trees/100"
-        />
-        <Question 
-            number={98}
-            title="Validate Binary Search Tree"
-            difficulty="Medium"
-            href="/leetcode/trees/98"
-        />
-        <Question
-            number={102}
-            title="Binary Tree Level Order Traversal"
-            difficulty="Medium"
-            href="/leetcode/trees/102"
-        />
+        {
+            questionsByCategory['trees'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
     </ul>
     <h1>Review</h1>
     <p>

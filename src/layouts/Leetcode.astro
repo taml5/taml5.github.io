@@ -7,11 +7,11 @@ import type { CollectionEntry } from "astro:content";
 
 const {category, index} = Astro.props;
 
-const sameCategory: CollectionEntry<"leetcode">[] = await getCollection('leetcode', ({ data }) => {
-  return data.category == category;
-})
+// Get all problems in the same category, sorted by order
+const sameCategory: CollectionEntry<"leetcode">[] = (
+  await getCollection('leetcode', ({ data }) => data.category === category)
+).sort((a, b) => a.data.order - b.data.order);
 
-sameCategory.sort((a, b) => a.data.order - b.data.order);
 const prev = sameCategory[index - 1] || null;
 const next = sameCategory[index + 1] || null;
 ---

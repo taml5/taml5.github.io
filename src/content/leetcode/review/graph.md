@@ -1,7 +1,9 @@
 ---
-category: review
-order: 1
 title: Graphs
+category: review
+number: 0
+difficulty: Easy
+order: 1
 ---
 
 # Graphs

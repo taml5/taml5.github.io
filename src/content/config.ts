@@ -3,7 +3,6 @@ import { defineCollection, z } from "astro:content";
 const leetcode = defineCollection({
   type: "content",
   schema: z.object({
-    order: z.number(), // order *within the category*
     title: z.string(),
     category: z.enum([
       "arrays",
@@ -15,7 +14,10 @@ const leetcode = defineCollection({
       "review",
       "matrices",
       "strings",
-      "trees",])
+      "trees",]),
+    number: z.number(), // LeetCode problem number
+    difficulty: z.enum(["Easy", "Medium", "Hard"]),
+    order: z.number(),  // Order within the category
   }),
 });
 
