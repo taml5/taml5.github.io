@@ -5,12 +5,12 @@ const { prev, next } = Astro.props;
 <nav class="pagination">
   {prev && (
     <a class="prev" href={`/leetcode/${prev.slug}/`}>
-      ← {prev.data.number}. {prev.data.title}
+      ← {prev.data.number ? `${prev.data.number}. ` : ""}{prev.data.title}
     </a>
   )}
   {next && (
     <a class="next" href={`/leetcode/${next.slug}/`}>
-      {next.data.number}. {next.data.title} →
+      {next.data.number ? `${next.data.number}. ` : ""}{next.data.title} →
     </a>
   )}
 </nav>

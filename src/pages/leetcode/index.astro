@@ -89,14 +89,14 @@ for (const category of categories) {
         These are brief study notes for important data structures/algorithm concepts that are foundational in Leetcode problems, to be used as a reference for the leetcode solutions above.
     </p>
     <ul>
-        <Review
-            title="Dynammic Programming"
-            href="/leetcode/review/dp"
-        />
-        <Review
-            title="Graphs"
-            href="/leetcode/review/graph"
-        />
+        {
+            questionsByCategory['review'].map((problem) => (
+                <Review 
+                    title={problem.data.title} 
+                    href={`/leetcode/${problem.slug}`}
+                />
+            ))
+        }
     </ul>
 </Layout>
 

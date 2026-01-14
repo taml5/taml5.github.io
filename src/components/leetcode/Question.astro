@@ -1,12 +1,19 @@
 ---
 interface Props {
-    number: number;
+    number?: number;
     title: string;
-    difficulty: 'Easy' | 'Medium' | 'Hard';
+    difficulty?: 'Easy' | 'Medium' | 'Hard';
     href: string;
 }
 
 const { number, title, difficulty, href } = Astro.props;
+
+if (!number) {
+    throw new Error('Question component requires a number prop');
+}
+if (!difficulty) {
+    throw new Error('Question component requires a difficulty prop');
+}
 ---
 
 <li class="question-card">

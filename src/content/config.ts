@@ -15,8 +15,8 @@ const leetcode = defineCollection({
       "matrices",
       "strings",
       "trees",]),
-    number: z.number(), // LeetCode problem number
-    difficulty: z.enum(["Easy", "Medium", "Hard"]),
+    number: z.number().optional(), // LeetCode problem number
+    difficulty: z.enum(["Easy", "Medium", "Hard"]).optional(),
     order: z.number(),  // Order within the category
   }),
 });

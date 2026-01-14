@@ -1,8 +1,6 @@
 ---
 title: Graphs
 category: review
-number: 0
-difficulty: Easy
 order: 1
 ---
 

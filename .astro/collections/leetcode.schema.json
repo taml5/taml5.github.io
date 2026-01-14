@@ -43,8 +43,6 @@
       "required": [
         "title",
         "category",
-        "number",
-        "difficulty",
         "order"
       ],
       "additionalProperties": false
