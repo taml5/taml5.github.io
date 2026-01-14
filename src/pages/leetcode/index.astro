@@ -8,7 +8,8 @@ import Review from "../../components/leetcode/Review.astro";
 
 <Layout>
     <Header />
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>This is where I post my notes for Leetcode problems I have solved. I try to focus more on the theoretical aspects and patterns rather than the cleanest or the most optimal solution—this is meant to build an intuition for approaching similar problems and spotting the underlying patterns and concepts. As such, I try to put more emphasis on where the solution comes from, and why it is correct in a somewhat more rigorous manner (although there might not be proofs of its optimality). Hopefully they will also be of some use to others.
+    </p>
     <h1>Arrays</h1>
     <ul>
         <Question 
@@ -103,6 +104,9 @@ import Review from "../../components/leetcode/Review.astro";
         />
     </ul>
     <h1>Review</h1>
+    <p>
+        These are brief study notes for important data structures/algorithm concepts that are foundational in Leetcode problems, to be used as a reference for the leetcode solutions above.
+    </p>
     <ul>
         <Review
             title="Dynammic Programming"
@@ -114,3 +118,9 @@ import Review from "../../components/leetcode/Review.astro";
         />
     </ul>
 </Layout>
+
+<style>
+    body {
+        margin-block-end: 4rem;
+    }
+</style>

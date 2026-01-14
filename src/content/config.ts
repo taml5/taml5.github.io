@@ -10,7 +10,10 @@ const leetcode = defineCollection({
       "dp",
       "graphs",
       "heaps",
+      "intervals",
+      "linked-lists",
       "review",
+      "matrices",
       "strings",
       "trees",])
   }),

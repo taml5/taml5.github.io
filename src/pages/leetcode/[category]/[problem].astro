@@ -9,12 +9,14 @@ import type { CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
   const posts = await getCollection("leetcode");
 
-  return posts.map((post) => ({
-    params: { category: post.slug.split("/")[0],
-              problem: post.slug.split("/")[1]
-     },
-    props: { entry: post },
-  }));
+  return posts.map((post) => {
+    const [category, problem] = post.slug.split("/");
+
+    return {
+      params: { category, problem },
+      props: { entry: post },
+    };
+  });
 }
 
 const { entry } = Astro.props as {

@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro';
-import Pagination from '../components/leetcode/Pagination.astro';
+import Navigation from '../components/leetcode/Navigation.astro';
 
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
@@ -30,7 +30,7 @@ const next = sameCategory[index + 1] || null;
 	<body>
 		<Header />
 		<slot />
-		<Pagination { ...{ prev, next } } />
+		<Navigation { ...{ prev, next } } />
 	</body>
 </html>
 
