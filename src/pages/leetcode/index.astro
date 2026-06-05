@@ -58,6 +58,19 @@ for (const category of categories) {
             ))
         }
     </ul>
+    <h1>Graphs</h1>
+    <ul>
+        {
+            questionsByCategory['graphs'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
+    </ul>
     <h1>Heaps</h1>
     <ul>
         {
