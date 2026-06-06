@@ -42,8 +42,7 @@
       },
       "required": [
         "title",
-        "category",
-        "order"
+        "category"
       ],
       "additionalProperties": false
     }

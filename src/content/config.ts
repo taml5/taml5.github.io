@@ -17,7 +17,7 @@ const leetcode = defineCollection({
       "trees",]),
     number: z.number().optional(), // LeetCode problem number
     difficulty: z.enum(["Easy", "Medium", "Hard"]).optional(),
-    order: z.number(),  // Order within the category
+    order: z.number().optional(),  // Order within the category
   }),
 });
 

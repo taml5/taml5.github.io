@@ -24,7 +24,14 @@ const questionsByCategory: Record<string, CollectionEntry<"leetcode">[]> = {};
 for (const category of categories) {
     questionsByCategory[category] = (await getCollection(
         'leetcode', ({ data }) => data.category === category
-    )).sort((a, b) => a.data.order - b.data.order);
+    )).sort((a, b) => {
+        const difficultyMap = { "Easy": 0, "Medium": 1, "Hard": 2 };
+        const aDiff = a.data.difficulty ? difficultyMap[a.data.difficulty] : -1;
+        const bDiff = b.data.difficulty ? difficultyMap[b.data.difficulty] : -1;
+        if (aDiff !== bDiff) return aDiff - bDiff;
+        if ((a.data.number ?? 0) !== (b.data.number ?? 0)) return (a.data.number ?? 0) - (b.data.number ?? 0);
+        return a.data.title.localeCompare(b.data.title);
+    });
 }   
 ---
 

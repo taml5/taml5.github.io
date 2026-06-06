@@ -1,7 +1,6 @@
 ---
 title: Graphs
 category: review
-order: 1
 ---
 
 # Graphs
