@@ -27,7 +27,7 @@ const { entry } = Astro.props as {
 const { Content } = await entry.render();
 ---
 
-<Layout category = {entry.data.category} index = {entry.data.order}>
+<Layout entry = {entry}>
     <Content />
 </Layout>
 
