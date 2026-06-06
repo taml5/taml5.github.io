@@ -97,6 +97,19 @@ for (const category of categories) {
             ))
         }
     </ul>
+    <h1>Strings</h1>
+    <ul>
+        {
+            questionsByCategory['strings'].map((problem) => (
+                <Question 
+                    number={problem.data.number} 
+                    title={problem.data.title} 
+                    difficulty={problem.data.difficulty} 
+                    href={`/leetcode/${problem.slug}`} 
+                />
+            ))
+        }
+    </ul>
     <h1>Review</h1>
     <p>
         These are brief study notes for important data structures/algorithm concepts that are foundational in Leetcode problems, to be used as a reference for the leetcode solutions above.
